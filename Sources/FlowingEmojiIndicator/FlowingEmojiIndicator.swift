@@ -13,10 +13,12 @@ public struct FlowingEmojiIndicator: View {
     
     public var body: some View {
         GeometryReader { geometry in
+            // 描画レートの度に呼ばれる
             TimelineView(.animation) { timeline in
                 // 時間の変化量
                 let time = timeline.date.timeIntervalSinceReferenceDate
                 // 秒数の変化量を変化時間で割って、どの程度の進行具合かを割合に変換
+                // truncatingReminderは少数で余りを求めるメソッド
                 let progress = (time.truncatingRemainder(dividingBy: duration)) / duration
                 
                 let startX = -emojiWidth - horizontalPadding
