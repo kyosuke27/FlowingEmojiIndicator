@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6C1036B42FD9B80F00036C6A /* FlowingEmojiIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1036B32FD9B80F00036C6A /* FlowingEmojiIndicator */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6C86A79C2FD874BC006E7071 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1036B42FD9B80F00036C6A /* FlowingEmojiIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
+				6C1036B32FD9B80F00036C6A /* FlowingEmojiIndicator */,
 			);
 			productName = DemoApp;
 			productReference = 6C86A78E2FD874B9006E7071 /* DemoApp.app */;
@@ -177,6 +183,9 @@
 			);
 			mainGroup = 6C86A7852FD874B9006E7071;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6C1036B22FD9B80F00036C6A /* XCLocalSwiftPackageReference "../../../FlowingEmojiIndicator" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6C86A78F2FD874B9006E7071 /* Products */;
 			projectDirPath = "";
@@ -387,6 +396,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +429,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,6 +571,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6C1036B22FD9B80F00036C6A /* XCLocalSwiftPackageReference "../../../FlowingEmojiIndicator" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../FlowingEmojiIndicator;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C1036B32FD9B80F00036C6A /* FlowingEmojiIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlowingEmojiIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C86A7862FD874B9006E7071 /* Project object */;
 }
