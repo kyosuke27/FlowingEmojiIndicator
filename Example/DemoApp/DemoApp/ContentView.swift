@@ -11,7 +11,8 @@ import FlowingEmojiIndicator
 struct ContentView: View {
     var body: some View {
         VStack {
-            FlowingEmojiIndicator(emoji: "😊")
+            FlowingEmojiIndicator(emoji: "😊",indicatorType: .sin)
+            FlowingEmojiIndicator(emoji: "🚗", indicatorType: .blankAndMove)
         }
         .padding()
     }
