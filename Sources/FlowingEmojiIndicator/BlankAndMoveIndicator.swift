@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct BlankAndMoveIndicator:View{
-    private var startX:CGFloat = 50
+    private var startX:CGFloat = 0
     private var diffX:CGFloat = 50
-    private var movePerseconds:CGFloat = 30
     // アニメーションの時間
     private let duration: TimeInterval = 10
+    /* 画面表示開始時間 */
     private let startDate:Date = Date()
+    /* 画面幅 */
     private let widthScreen:CGFloat
+    /* 表示文字列 */
     let emoji:String
-    
-    init(emoji: String,geometry:GeometryProxy) {
+    /* アイコンサイズ */
+    let iconSize:CGFloat
+
+    init(emoji: String,iconSize:CGFloat = 18,geometry:GeometryProxy) {
         self.emoji = emoji
         self.widthScreen = geometry.size.width
+        self.iconSize = iconSize
     }
     
     var body: some View {
@@ -49,6 +54,7 @@ struct BlankAndMoveIndicator:View{
 
                 HStack{
                     Text(emoji)
+                        .font(.system(size: iconSize))
                         .offset(x: x)
                 }
                 
