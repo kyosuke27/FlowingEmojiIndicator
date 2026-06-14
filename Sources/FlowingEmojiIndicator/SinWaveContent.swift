@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  FlowingEmojiIndicator
-//
-//  Created by kyosuke on 2026/06/12.
-//
-
 import SwiftUI
 
 struct SinWaveContent:View{
@@ -12,14 +5,15 @@ struct SinWaveContent:View{
     private let emojiWidth: CGFloat = 30
     private let amplitude: CGFloat = 12
     private let duration: TimeInterval = 3
-    private let geometry:GeometryProxy
     private let iconSize:CGFloat
+    /* 画面幅 */
+    private let widthScreen:CGFloat
     let emoji:String
     
     init(emoji: String,iconSize:CGFloat = 18,geometry:GeometryProxy) {
         self.emoji = emoji
         self.iconSize = iconSize
-        self.geometry = geometry
+        self.widthScreen = geometry.size.width
     }
     
     var body: some View {
@@ -33,7 +27,7 @@ struct SinWaveContent:View{
                 let progress = (time.truncatingRemainder(dividingBy: duration)) / duration
                 
                 let startX = -emojiWidth - horizontalPadding
-                let endX = geometry.size.width + horizontalPadding
+                let endX = self.widthScreen + horizontalPadding
                 let x = startX + (endX - startX) * progress
                 
                 // sin波(2つの波を作る)
