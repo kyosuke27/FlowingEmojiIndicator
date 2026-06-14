@@ -13,10 +13,12 @@ struct SinWaveContent:View{
     private let amplitude: CGFloat = 12
     private let duration: TimeInterval = 3
     private let geometry:GeometryProxy
+    private let iconSize:CGFloat
     let emoji:String
     
-    init(emoji: String,geometry:GeometryProxy) {
+    init(emoji: String,iconSize:CGFloat = 18,geometry:GeometryProxy) {
         self.emoji = emoji
+        self.iconSize = iconSize
         self.geometry = geometry
     }
     
@@ -37,7 +39,8 @@ struct SinWaveContent:View{
                 // sin波(2つの波を作る)
                 let y = sin(progress * 2 * .pi * 2) * amplitude
                 HStack{
-                    Text("❤️")
+                    Text(emoji)
+                        .font(.system(size: iconSize))
                         .offset(x: x, y: y)
                 }
                 
