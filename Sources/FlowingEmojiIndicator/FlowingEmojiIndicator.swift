@@ -14,6 +14,8 @@ public struct FlowingEmojiIndicator: View {
             switch self.indicatorType{
                 case .sin:
                     SinWaveContent(emoji: self.emoji, geometry: geometry)
+                case .blankAndMove:
+                    BlankAndMoveIndicator(emoji: self.emoji, geometry: geometry)
             }
         }
     }
